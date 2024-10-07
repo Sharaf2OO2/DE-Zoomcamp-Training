@@ -1,0 +1,2 @@
+# An issue faced me while configuring
+If you are on Windows and running `docker-compose up` and this error occurs `Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:6789 -> 0.0.0.0:0: listen tcp 0.0.0.0:6789: bind: An attempt was made to access a socket in a way forbidden by its access permissions.`, you can solve it by running your Powershell as an administrator, and then run `net stop winnat`, and rerun your docker-compose.yml, it should run properly, finally run `net start winnat`.
